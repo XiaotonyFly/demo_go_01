@@ -13,7 +13,19 @@ func main() {
 	a = 2
 	fmt.Printf("a is %T\n", a)
 	fmt.Println(a)
+
+	var b = 3.9
+	fmt.Println(b)
+
 	p := &a
 	fmt.Println(&a)
 	fmt.Println(*p)
+
+	fmt.Println(ss(float32(a), float32(b)))
+
+}
+
+func ss(a, b float32) float32 {
+	var c = a * b
+	return c
 }
