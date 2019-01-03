@@ -7,6 +7,9 @@ func main() {
 	fmt.Println(x, y)
 	getJbVariable()
 	getMultivariable()
+	fmt.Println(CL)
+	fmt.Println(CL_1)
+	getConst()
 }
 
 //Go:变量
@@ -60,3 +63,29 @@ func getMultivariable() {
 _ (下划线)实际上是一个只写变量，你不能得到它的值。这样做是因为 Go 语言中你必须使用所有被声明的变量，但有时你并不需要使用从一个函数得到的所有返回值。
 
 并行赋值也被用于当一个函数返回多个返回值时，比如这里的 val 和错误 err 是通过调用 Func1 函数同时得到：val, err = Func1(var1)。*/
+
+//2、Go语言常量 (格式：const identifier [type] = value)
+const CL string = "这是一个常量" //显式定义
+const CL_1 = "这是一个常量1"     //隐式定义
+const (
+	u = 1 << iota
+	l = 3 << iota
+	j
+	k
+)
+
+func getConst() {
+	const (
+		a = iota //0
+		b        //1
+		c        //2
+		d = "ha" //独立值，iota += 1
+		e        //"ha"   iota += 1
+		f = 100  //iota +=1
+		g        //100  iota +=1
+		h = iota //7,恢复计数
+		i        //8
+	)
+	fmt.Println(a, b, c, d, e, f, g, h, i)
+	fmt.Println(u, l, j, k)
+}
