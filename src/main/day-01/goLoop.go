@@ -56,6 +56,7 @@ func main() {
    		statement(s);
 	}
 */
+//乘法表
 func getChengFaBiao() {
 	for i := 1; i <= 9; i++ {
 		for j := 1; j <= i; j++ {
@@ -65,6 +66,7 @@ func getChengFaBiao() {
 	}
 }
 
+//素数
 func getSuShu() {
 	var i, j int
 	for i = 2; i < 100; i++ {
