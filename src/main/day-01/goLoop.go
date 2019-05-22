@@ -76,7 +76,8 @@ func getSuShu() {
 			}
 		}
 		if j > (i / j) {
-			fmt.Println(j)
+			fmt.Printf("当前j = %d", j)
+			fmt.Println()
 			fmt.Printf("%d  是素数\n", i)
 		}
 	}
