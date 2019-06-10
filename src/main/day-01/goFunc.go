@@ -12,6 +12,12 @@ func main() {
 	}
 	fmt.Println(getSquareRoot(16))
 	testFunc()
+
+	fmt.Println("-----------------分割线-----------------")
+	aa := getBiBao()
+	fmt.Println(aa())
+	fmt.Println(aa())
+	fmt.Println(aa())
 }
 
 type cb func(int) int
@@ -31,4 +37,21 @@ func testFunc() {
 		fmt.Printf("woshihuidiao: x: %d\n", i)
 		return i
 	})
+}
+
+func getBiBao() func() int {
+	i := 0
+	return func() int {
+		i++
+		return i
+	}
+}
+
+type Tea struct {
+	name        string
+	growingArea string
+}
+
+func (tea Tea) aa() {
+	fmt.Println()
 }
