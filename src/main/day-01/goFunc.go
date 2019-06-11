@@ -18,6 +18,9 @@ func main() {
 	fmt.Println(aa())
 	fmt.Println(aa())
 	fmt.Println(aa())
+	fmt.Println("-----------------分割线-----------------")
+	tea1 := Tea{"红茶", "福建"}
+	tea1.aa()
 }
 
 type cb func(int) int
@@ -53,5 +56,5 @@ type Tea struct {
 }
 
 func (tea Tea) aa() {
-	fmt.Println()
+	fmt.Printf("茶的名称为%s，产地为%s\n", tea.name, tea.growingArea)
 }
