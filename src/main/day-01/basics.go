@@ -34,8 +34,9 @@ func getJbVariable() {
 	*/
 	var b = 3.6
 	fmt.Println("b === ", b)
-	fmt.Printf("b is %T\n", b)
-	fmt.Printf("b is %p\n", &b)
+	fmt.Printf("b is %T\n", b)  //获取b的类型
+	fmt.Printf("b is %p\n", &b) //获取b的内存地址
+
 	/*第三种方式：省略var, 注意 :=左侧的变量不应该是已经声明过的，否则会导致编译错误（不适用于全局变量的声明, 即只能在函数体中运用）。
 	v_name := value
 	*/
@@ -67,6 +68,8 @@ _ (下划线)实际上是一个只写变量，你不能得到它的值。这样�
 //2、Go语言常量 (格式：const identifier [type] = value)
 const CL string = "这是一个常量" //显式定义
 const CL_1 = "这是一个常量1"     //隐式定义
+
+//每左移一位相当于乘以2的1次方，每右移一位相当于除以2的1次方
 const (
 	u = 1 << iota
 	l = 3 << iota
@@ -74,6 +77,9 @@ const (
 	k
 )
 
+//iota，特殊常量，可以认为是一个可以被编译器修改的常量。
+
+//iota 在 const关键字出现时将被重置为 0(const 内部的第一行之前)，const 中每新增一行常量声明将使 iota 计数一次(iota 可理解为 const 语句块中的行索引)。
 func getConst() {
 	const (
 		a = iota //0
