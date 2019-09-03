@@ -26,6 +26,7 @@ func showArithmeticOperator() {
 
 //关系运算符
 //等于（==）、不等于（!=）、大于（>）、小于（<）、大于等于（>=）、小于等于（<=）
+//Go语言没有三目运算符（即不支持?:形式的条件判断）
 func showGxOperator() {
 	a, b := 3, 4
 	if a == b {
