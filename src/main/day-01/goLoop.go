@@ -27,6 +27,7 @@ func main() {
 		fmt.Printf(" a = %d ", a)
 		a++
 	}
+	fmt.Println("")
 
 	/*
 		第三种：for {},相当于C语言的for(;;)
