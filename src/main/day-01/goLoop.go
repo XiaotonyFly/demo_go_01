@@ -45,6 +45,17 @@ func main() {
 
 	getSuShu()
 
+	var a1 = 10
+Loop:
+	for a1 < 20 {
+		if a1 == 14 {
+			a1 += 1
+			goto Loop
+		}
+		fmt.Printf("a1 = %d \n", a1)
+		a1++
+	}
+
 }
 
 /*
