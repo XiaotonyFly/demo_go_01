@@ -28,6 +28,9 @@ func main() {
 	s := []string{"aa", "bb"}
 	fmt.Println(s[1])
 
+	var balance = [...]float32{1, 2, 6.9, 3.4}
+	fmt.Println("balance数组长度为：", len(balance))
+
 	a := "bnnb"
 	var ptr *string
 	ptr = &a
@@ -44,12 +47,11 @@ func main() {
 		fmt.Println("p 为空指针")
 	} else {
 		fmt.Println("p 不为空指针")
+		fmt.Println(*p)
 	}
 	ads(&b)
 	fmt.Println("---------------分割线-------------")
 
-	var balance = [...]float32{1, 2, 6.9, 3.4}
-	fmt.Println("balance数组长度为：", len(balance))
 }
 
 func ads(h *int) {
