@@ -29,7 +29,10 @@ func main() {
 	fmt.Println(s[1])
 
 	var balance = [...]float32{1, 2, 6.9, 3.4}
+	bl := balance[:]
+	a3 := append(bl, float32(8))
 	fmt.Println("balance数组长度为：", len(balance))
+	fmt.Printf("a3切片长度为%d,容量为%d\n", len(a3), cap(a3))
 
 	a := "bnnb"
 	var ptr *string
