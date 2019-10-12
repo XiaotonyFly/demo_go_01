@@ -45,6 +45,7 @@ func main() {
 
 	getSuShu()
 
+	//goto关键字的运用
 	var a1 = 10
 Loop:
 	for a1 < 20 {

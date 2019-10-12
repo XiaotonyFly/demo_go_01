@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	//DiGui(5)
+	DiGui(5)
 	cheng := JieCheng(4)
 	fmt.Println(cheng)
 
@@ -15,6 +15,13 @@ func main() {
 	var a int
 	a = 4
 	var b float32
+	/*
+		Go 语言类型转换
+			类型转换用于将一种数据类型的变量转换为另外一种类型的变量。Go 语言类型转换基本格式如下：
+
+			type_name(expression)
+			type_name 为类型，expression 为表达式。
+	*/
 	fmt.Printf("a = %f\n", float32(a))
 	fmt.Printf("b = %f\n", b)
 }
